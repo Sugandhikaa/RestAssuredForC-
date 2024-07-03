@@ -34,7 +34,7 @@ namespace RegExApiTest.RegEx
             }
         }
         //add object funtions
-
+/* 
         public async Task AddObjectPost()
         {
 
@@ -53,20 +53,16 @@ namespace RegExApiTest.RegEx
             try
             {
                 var responseModel = JsonConvert.SerializeObject(newObject);
-                //var client = new RestClient("https://api.restful-api.dev/objects");
-                //var request1 = new RestRequest(Method.Post);
+               
                 var request = new HttpRequestMessage(HttpMethod.Post, "objects");
                 request.Content = new StringContent(responseModel, Encoding.UTF8, "application/json");
                 var responceback = await restClient.SendAsync(request);
-                //var request=new RestRequest("",Method.Post);
-                //request.AddHeader("Content-Type","application/json");
-                //request.AddJsonBody(responseModel);
-                //var restClient1 =new RestRequest("",)
-                // var request=new RestRequest(MethodAccessException.); //return responseModel;
+                
                 responceback.EnsureSuccessStatusCode();
 
                 var responceContent = await responceback.Content.ReadAsStringAsync();
                 var createdObject = JsonConvert.DeserializeObject<dynamic>(responceContent);
+               
                 Assert.Equal("Apple MacBook Pro 16", (string)createdObject.name);
                 Assert.Equal("Apple MacBook Pro 16", (string)createdObject.name);
                 Assert.Equal(2019, (int)createdObject.data.year);
@@ -79,21 +75,8 @@ namespace RegExApiTest.RegEx
                 //return null;
             }
 
-        }
+        }*/
+    } 
+
+
     }
-
-    internal class RestRequest
-    {
-        private object pOST;
-
-        public RestRequest(Method post)
-        {
-            pOST = post;
-        }
-
-        public RestRequest(object pOST, object methodAccessExcept)
-        {
-            this.pOST = pOST;
-        }
-    }
-}
