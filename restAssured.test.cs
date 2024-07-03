@@ -1,16 +1,16 @@
-﻿﻿using Newtonsoft.Json;
-using RestSharp;
-using System;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices.Marshalling;
+﻿﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Newtonsoft.Json;
 using RegExApiTest.RegEx;
-using Xunit;
-namespace RegExApiTest;
 
-public class UnitTest1
+namespace RestAssuredApiProject.ApiTest.Controllers{
+public class RestAssuredApiTests 
 {
     [Fact]
-    public async void Get_RegEx_Info()
+    //Test to Get list of all objects.
+       public async void Get_RestAssured_Info()
     {
         RegExApi api = new RegExApi();
         var response = await api.GetApiList();
@@ -119,5 +119,10 @@ public class UnitTest1
     }
 }
 
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
 
