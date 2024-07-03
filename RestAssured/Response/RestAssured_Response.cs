@@ -1,5 +1,5 @@
 using Newtonsoft.Json;
-namespace RegExApiTest.RegEx.Response
+namespace RegExApiTest.RestAssured.Response
 {
     public class GetListData
     {

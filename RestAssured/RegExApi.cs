@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
-using RegExApiTest.RegEx.Response;
+using RegExApiTest.RestAssured.Response;
 using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 using RestSharp;

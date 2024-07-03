@@ -14,6 +14,7 @@
           "Selenium.WebDriver": "4.22.0",
           "coverlet.collector": "6.0.0",
           "xunit": "2.8.1",
+          "xunit.runner.console": "2.8.1",
           "xunit.runner.visualstudio": "2.8.1"
         },
         "runtime": {
@@ -361,6 +362,7 @@
           }
         }
       },
+      "xunit.runner.console/2.8.1": {},
       "xunit.runner.visualstudio/2.8.1": {}
     }
   },
@@ -481,6 +483,13 @@
       "sha512": "sha512-38UnJW+64Wn8QIabujcNEw0HKvWw2AlYCgU8GNwCCDqyrSuRYb7zwetn7SHoHfbL9e9FAvEiAMXmc2wSUY8sVQ==",
       "path": "xunit.extensibility.execution/2.8.1",
       "hashPath": "xunit.extensibility.execution.2.8.1.nupkg.sha512"
+    },
+    "xunit.runner.console/2.8.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HxmMv/6wxtGMA+twCKsNiQzMG2VmrVYaLk9R+ShiPlb0qFi1OrNNey8QK4zCBP7VY+aKi71wWZEaRqZkLv1RAQ==",
+      "path": "xunit.runner.console/2.8.1",
+      "hashPath": "xunit.runner.console.2.8.1.nupkg.sha512"
     },
     "xunit.runner.visualstudio/2.8.1": {
       "type": "package",
