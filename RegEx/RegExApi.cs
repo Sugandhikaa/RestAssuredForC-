@@ -16,18 +16,59 @@ namespace RegExApiTest.RegEx
         private string URI = "https://api.restful-api.dev/objects";
         //private string RegEx = "";
 
-        public async Task<List<Product>> GetApiList()
+        public async Task<List<GetListMain>> GetApiList()
         {
             UriBuilder builder = new UriBuilder($"{URI}");
-            var Response =await restClient.GetAsync(builder.Uri);
-            var context=await Response.Content.ReadAsStringAsync();
-            try{
-                var responseModel=JsonConvert.DeserializeObject<List<Product>>(context);
+            var Response = await restClient.GetAsync(builder.Uri);
+            var context = await Response.Content.ReadAsStringAsync();
+            try
+            {
+                var responseModel = JsonConvert.DeserializeObject<List<GetListMain>>(context);
                 return responseModel;
             }
-            catch{
+            catch
+            {
                 return null;
             }
+        }
+        //add object funtions
+
+        public async Task AddObjectPost()
+        {
+
+            
+            var newObject = new
+            {
+                name = "Apple MacBook Pro 16",
+                data = new
+               {
+                    year = 2019,
+                    price = 849.99,
+                    CPUmodel = "Intel Core 19",
+                    HardDiskSize = "1 TB"
+                }
+            };
+            try
+            {
+                var responseModel = JsonConvert.SerializeObject(newObject);  
+                
+                var request=new RestRequest(MethodAccessException.T); //return responseModel;
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
+    }
+
+    internal class RestRequest
+    {
+        private object pOST;
+
+        public RestRequest(object pOST)
+        {
+            this.pOST = pOST;
         }
     }
 }

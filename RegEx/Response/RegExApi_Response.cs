@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 namespace RegExApiTest.RegEx.Response
 {
-public class ProductData
+public class GetListData
 {
     [JsonProperty("color")]
     public required string Color { get; set; }
@@ -52,7 +52,7 @@ public class ProductData
     public required string JsonPrice { get; set; }
 }
 
-public class Product
+public class GetListMain
 {
     [JsonProperty("id")]
     public required string Id { get; set; }
@@ -61,8 +61,30 @@ public class Product
     public required string Name { get; set; }
 
     [JsonProperty("data")]
-    public required ProductData Data { get; set; }
+    public required GetListData Data { get; set; }
 }
+
+
+    public class AddItemProperties
+    {
+        public int year { get; set; }
+        public double price { get; set; }
+
+        [JsonProperty("CPU model")]
+        public required string CPUmodel { get; set; }
+
+        [JsonProperty("Hard disk size")]
+        public required string Harddisksize { get; set; }
+    }
+    public class AddObjects
+    {
+        public required string id { get; set; }
+        public required string name { get; set; }
+        public required AddItemProperties data { get; set; }
+        public DateTime createdAt { get; set; }
+    }
+
+
    /*  public class ApiResponse
     {
         public List<Product> Products { get; set; }
@@ -73,4 +95,3 @@ public class Product
         }
     } */
 }
-

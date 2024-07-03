@@ -1,4 +1,4 @@
-﻿ using RegExApiTest.RegEx;
+﻿﻿ using RegExApiTest.RegEx;
 using Xunit;
 namespace RegExApiTest;
 
@@ -21,5 +21,3 @@ public class UnitTest1
 
     }
 }
- 
-
