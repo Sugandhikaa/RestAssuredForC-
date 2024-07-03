@@ -10,9 +10,9 @@ using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace RegExApiTest.RegEx
+namespace RegExApiTest.RestAssured
 {
-    public class RegExApi
+    public class RestAssuredApi
     {
         private HttpClient restClient = new HttpClient();
         private string URI = "https://api.restful-api.dev/objects";

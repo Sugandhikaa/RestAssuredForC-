@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
-using RegExApiTest.RegEx;
+using RegExApiTest.RestAssured;
 
 namespace RestAssuredApiProject.ApiTest.Controllers{
 public class RestAssuredApiTests 
@@ -12,7 +12,7 @@ public class RestAssuredApiTests
     //Test to Get list of all objects.
        public async void Get_RestAssured_Info()
     {
-        RegExApi api = new RegExApi();
+        RestAssuredApi api = new RestAssuredApi();
         var response = await api.GetApiList();
         Assert.NotNull(response);
         Assert.NotEmpty(response);
@@ -72,7 +72,7 @@ public class RestAssuredApiTests
     {
         try
         {
-            RegExApi api = new RegExApi();
+            RestAssuredApi api = new RestAssuredApi();
             int objectId = 1;
             var fetchedObject = await api.GetObjectById(objectId);
 
@@ -89,7 +89,7 @@ public class RestAssuredApiTests
     {
         try
         {
-            RegExApi api = new RegExApi();
+            RestAssuredApi api = new RestAssuredApi();
             int objectId = 1; // Replace with the actual ID of the object you want to update
             await api.UpdateObject(objectId);
 
@@ -106,7 +106,7 @@ public class RestAssuredApiTests
 {
     try
     {
-         RegExApi api = new RegExApi();
+         RestAssuredApi api = new RestAssuredApi();
         int objectId = 1; // Replace with the actual ID of the object you want to delete
         await api.DeleteObject(objectId);
 
