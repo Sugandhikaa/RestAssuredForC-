@@ -121,6 +121,11 @@ namespace RegExApiTest.RegEx.Response
         public required UpdateByPutPropertiy data { get; set; }
         public DateTime updatedAt { get; set; }
     }
+     public class Delete
+    {
+        public required string message { get; set; }
+    }
+
 
 
     /*  public class ApiResponse
