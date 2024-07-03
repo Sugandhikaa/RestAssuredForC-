@@ -1,3 +1,9 @@
+G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.csproj.AssemblyReference.cache
+G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.GeneratedMSBuildEditorConfig.editorconfig
+G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.AssemblyInfoInputs.cache
+G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.AssemblyInfo.cs
+G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.csproj.CoreCompileInputs.cache
+G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.sourcelink.json
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\testhost.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\testhost.exe
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\selenium-manager\linux\selenium-manager
@@ -19,6 +25,7 @@ G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\Microsoft.TestPlatform.CrossPlatEngine
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\Microsoft.TestPlatform.Utilities.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.Common.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\Newtonsoft.Json.dll
+G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\RestSharp.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\WebDriver.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\xunit.abstractions.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\xunit.assert.dll
@@ -89,15 +96,9 @@ G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\zh-Hans\Microsoft.VisualStudio.TestPla
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.csproj.AssemblyReference.cache
-G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.GeneratedMSBuildEditorConfig.editorconfig
-G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.AssemblyInfoInputs.cache
-G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.AssemblyInfo.cs
-G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.csproj.CoreCompileInputs.cache
 G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApi.55DDDE6D.Up2Date
 G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.dll
 G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\refint\RegExApiTest.dll
 G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.pdb
 G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.genruntimeconfig.cache
 G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\ref\RegExApiTest.dll
-G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.sourcelink.json

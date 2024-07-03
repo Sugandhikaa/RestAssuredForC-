@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RegExApiTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f85845ac964decc3a4425d999208d0c0cb41d0a2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edea4a17ab8b3ca55cd2e8c3839f3dff60f927d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("RegExApiTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RegExApiTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
