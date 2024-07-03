@@ -43,6 +43,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Allure.Xunit": {
+              "target": "Package",
+              "version": "[2.12.1, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.9.0, )"

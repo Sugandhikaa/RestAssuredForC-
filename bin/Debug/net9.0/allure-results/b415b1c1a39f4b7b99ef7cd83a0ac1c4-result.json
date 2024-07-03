@@ -1,0 +1,52 @@
+{
+  "uuid": "7185553f-2b8a-4026-8ac5-a54890d2826d",
+  "historyId": "365ecee10fd72581f7efd3eebe45f8fe",
+  "testCaseId": "6d0cfb1b0e9f501efcf7cc14123a89eb",
+  "fullName": "RegExApiTest:RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.Get_RestAssured_Info()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET TP Worker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-CVD2E62"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "xUnit.net"
+    },
+    {
+      "name": "testClass",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.Get_RestAssured_Info"
+    },
+    {
+      "name": "package",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests"
+    }
+  ],
+  "links": [],
+  "name": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.Get_RestAssured_Info",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Assert.Equal() Failure: Strings differ\r\nExpected: \"256 GB\"\r\nActual:   null",
+    "trace": "   at Xunit.Assert.Equal(String expected, String actual, Boolean ignoreCase, Boolean ignoreLineEndingDifferences, Boolean ignoreWhiteSpaceDifferences, Boolean ignoreAllWhiteSpace) in /_/src/xunit.assert/Asserts/StringAsserts.cs:line 1332\r\n   at Xunit.Assert.Equal(String expected, String actual) in /_/src/xunit.assert/Asserts/StringAsserts.cs:line 841\r\n   at RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.Get_RestAssured_Info() in G:\\xUnitApi\\RegExApiTest\\restAssured.test.cs:line 100\r\n   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object state)\r\n   at Xunit.Sdk.AsyncTestSyncContext.<>c__DisplayClass7_0.<Post>b__0() in /_/src/xunit.execution/Sdk/AsyncTestSyncContext.cs:line 58"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1720044495178,
+  "stop": 1720044495562
+}

@@ -1,0 +1,12 @@
+{
+  "uuid": "a3803226-72b9-4471-ab96-2686bc54a842",
+  "name": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests",
+  "children": [
+    "7b15128d-35c4-419e-9ed7-90ea40d6a1c5"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1720036008353,
+  "stop": 1720036008438
+}

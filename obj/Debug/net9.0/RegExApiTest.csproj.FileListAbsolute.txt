@@ -102,3 +102,8 @@ G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\refint\RegExApiTest.dll
 G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.pdb
 G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\RegExApiTest.genruntimeconfig.cache
 G:\xUnitApi\RegExApiTest\obj\Debug\net9.0\ref\RegExApiTest.dll
+G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\Allure.Net.Commons.dll
+G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\Allure.Xunit.reporters.dll
+G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\AspectInjector.Broker.dll
+G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\0Harmony.dll
+G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\MimeTypesMap.dll

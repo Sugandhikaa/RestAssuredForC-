@@ -23,5 +23,6 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Pkgxunit_runner_console Condition=" '$(Pkgxunit_runner_console)' == '' ">C:\Users\sugandhika\.nuget\packages\xunit.runner.console\2.8.1</Pkgxunit_runner_console>
     <Pkgxunit_analyzers Condition=" '$(Pkgxunit_analyzers)' == '' ">C:\Users\sugandhika\.nuget\packages\xunit.analyzers\1.14.0</Pkgxunit_analyzers>
+    <PkgAspectInjector Condition=" '$(PkgAspectInjector)' == '' ">C:\Users\sugandhika\.nuget\packages\aspectinjector\2.8.1</PkgAspectInjector>
   </PropertyGroup>
 </Project>
