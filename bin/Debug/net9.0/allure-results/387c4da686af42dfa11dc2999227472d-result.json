@@ -1,0 +1,51 @@
+{
+  "uuid": "2b82ed61-2733-4685-8f35-15385405d1c8",
+  "historyId": "6b5d0655ea95c3ec897b5193ca14da1c",
+  "testCaseId": "47d62b1e1b7dc4ea8992bc63e2b054aa",
+  "fullName": "RegExApiTest:RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.CallDeleteObject()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET TP Worker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-CVD2E62"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "xUnit.net"
+    },
+    {
+      "name": "testClass",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.CallDeleteObject"
+    },
+    {
+      "name": "package",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests"
+    }
+  ],
+  "links": [],
+  "name": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.CallDeleteObject",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": ""
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1720047234674,
+  "stop": 1720047234675
+}

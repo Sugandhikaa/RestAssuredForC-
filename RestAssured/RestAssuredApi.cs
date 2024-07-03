@@ -34,48 +34,46 @@ namespace RegExApiTest.RestAssured
             }
         }
         //add object funtions
-        /* 
-                public async Task AddObjectPost()
+
+        public async Task<String> CreateAnObject()
+        {
+            var newObject = new
+            {
+                name = "Apple MacBook Pro 16",
+                data = new
                 {
+                    year = 2019,
+                    price = 849.99,
+                    CPUmodel = "Intel Core 19",
+                    HardDiskSize = "1 TB"
+                }
+            };
+            var responseModel = JsonConvert.SerializeObject(newObject);
+            var request = new HttpRequestMessage(HttpMethod.Post, "objects");
+            request.Content = new StringContent(responseModel, Encoding.UTF8, "application/json");
+            var responceback = await restClient.SendAsync(request);
+            responceback.EnsureSuccessStatusCode();
+
+             var responseContent = await responceback.Content.ReadAsStringAsync();
+            var createdObject = JsonConvert.DeserializeObject<dynamic>(responseContent);
+
+            // Extract and return the ID of the created object
+            string objectId = createdObject.id; // Adjust this based on your actual response structure
+            return objectId;
+        }
+        public async Task<dynamic> verifyCreatedObject(string objectId)
+        {
+            UriBuilder builder = new UriBuilder($"{URI}","/{objectId}");
+            var Response = await restClient.GetAsync(builder.Uri);
+            var context = await Response.Content.ReadAsStringAsync();
 
 
-                    var newObject = new
-                    {
-                        name = "Apple MacBook Pro 16",
-                        data = new
-                        {
-                            year = 2019,
-                            price = 849.99,
-                            CPUmodel = "Intel Core 19",
-                            HardDiskSize = "1 TB"
-                        }
-                    };
-                    try
-                    {
-                        var responseModel = JsonConvert.SerializeObject(newObject);
+            //var responceContent = await responceback.Content.ReadAsStringAsync();
+            var createdObject = JsonConvert.DeserializeObject<dynamic>(context);
+            return createdObject;
 
-                        var request = new HttpRequestMessage(HttpMethod.Post, "objects");
-                        request.Content = new StringContent(responseModel, Encoding.UTF8, "application/json");
-                        var responceback = await restClient.SendAsync(request);
+        }
 
-                        responceback.EnsureSuccessStatusCode();
-
-                        var responceContent = await responceback.Content.ReadAsStringAsync();
-                        var createdObject = JsonConvert.DeserializeObject<dynamic>(responceContent);
-
-                        Assert.Equal("Apple MacBook Pro 16", (string)createdObject.name);
-                        Assert.Equal("Apple MacBook Pro 16", (string)createdObject.name);
-                        Assert.Equal(2019, (int)createdObject.data.year);
-                        Assert.Equal(1849.99, (double)createdObject.data.price);
-                        Assert.Equal("Intel Core i9", (string)createdObject.data["CPUmodel"]);
-                        Assert.Equal("1 TB", (string)createdObject.data["HardDiskSize"]);
-                    }
-                    catch
-                    {
-                        //return null;
-                    }
-
-                }*/
         public async Task<object> GetObjectById(int id)
         {
             try
@@ -152,27 +150,27 @@ namespace RegExApiTest.RestAssured
                 throw new ApplicationException($"Error updating object with ID {id}.", ex);
             }
 
-            
-        }
-public async Task DeleteObject(int id)
-{
-    try
-    {
-        var request = new HttpRequestMessage(HttpMethod.Delete, $"objects/{id}");
-        
-        var response = await restClient.SendAsync(request);
-        response.EnsureSuccessStatusCode();
 
-        // Optionally, handle response content if needed
-        var responseContent = await response.Content.ReadAsStringAsync();
-        Console.WriteLine($"Object with ID {id} deleted successfully.");
-    }
-    catch (Exception ex)
-    {
-        // Handle any exceptions or log errors
-        throw new ApplicationException($"Error deleting object with ID {id}.", ex);
-    }
-}
+        }
+        public async Task DeleteObject(int id)
+        {
+            try
+            {
+                var request = new HttpRequestMessage(HttpMethod.Delete, $"objects/{id}");
+
+                var response = await restClient.SendAsync(request);
+                response.EnsureSuccessStatusCode();
+
+                // Optionally, handle response content if needed
+                var responseContent = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"Object with ID {id} deleted successfully.");
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions or log errors
+                throw new ApplicationException($"Error deleting object with ID {id}.", ex);
+            }
+        }
 
     }
 
