@@ -106,84 +106,97 @@ namespace RegExApiTest.RestAssured
 
                 return responseObject; // Return the deserialized object if needed
 
-
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"HTTP Request Exception: {ex.Message}");
+                throw; // Re-throw the exception or handle it as per your application's error handling strategy
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine($"JSON Deserialization Exception: {ex.Message}");
+                throw; // Re-throw the exception or handle it as per your application's error handling strategy
             }
             catch (Exception ex)
             {
-                // Handle any exceptions or log errors
-                //  throw new ApplicationException($"Error fetching object with ID {objectId}.", ex);
+                Console.WriteLine($"Exception: {ex.Message}");
+                throw; // Handle any other exceptions or log errors
             }
+
+            // Ensure all paths return a value or throw an exception
+            throw new InvalidOperationException("Unexpected control flow reached end of method without returning a value.");
         }
-        public async Task UpdateObject(int objectId)
+    
+    public async Task UpdateObject(int objectId)
+    {
+        var updatedObject = new
         {
-            var updatedObject = new
+            name = "Updated MacBook Pro 16",
+            data = new
             {
-                name = "Updated MacBook Pro 16",
-                data = new
-                {
-                    year = 2021,
-                    price = 1999.99,
-                    CPUmodel = "Intel Core i9",
-                    HardDiskSize = "2 TB"
-                }
-            };
-
-            try
-            {
-                UriBuilder builder = new UriBuilder(URI); // Replace URI with your actual base URI
-                builder.Path += $"/{objectId}";
-                // var Response = await restClient.GetAsync(builder.Uri);
-                var request = new HttpRequestMessage(HttpMethod.Put, builder.Uri);
-
-                // Serialize the updated object to JSON
-                var json = JsonConvert.SerializeObject(updatedObject);
-                request.Content = new StringContent(json, Encoding.UTF8, "application/json");
-
-                var response = await restClient.SendAsync(request);
-                response.EnsureSuccessStatusCode();
-
-                var responseContent = await response.Content.ReadAsStringAsync();
-                var updatedResponse = JsonConvert.DeserializeObject<dynamic>(responseContent);
-
-                // Example: Verify the updated object properties
-                Assert.Equal("Updated MacBook Pro 16", (string)updatedResponse.name);
-                Assert.Equal(2021, (int)updatedResponse.data.year);
-                Assert.Equal(1999.99, (double)updatedResponse.data.price);
-                Assert.Equal("Intel Core i9", (string)updatedResponse.data.CPUmodel);
-                Assert.Equal("2 TB", (string)updatedResponse.data.HardDiskSize);
+                year = 2021,
+                price = 1999.99,
+                CPUmodel = "Intel Core i9",
+                HardDiskSize = "2 TB"
             }
-            catch (Exception ex)
-            {
-                // Handle any exceptions or log errors
-                throw new ApplicationException($"Error updating object with ID {objectId}.", ex);
-            }
+        };
 
-
-        }
-        public async Task DeleteObject(int objectId)
+        try
         {
-            try
-            {
-                UriBuilder builder = new UriBuilder(URI); // Replace URI with your actual base URI
-                builder.Path += $"/{objectId}";
-                // var Response = await restClient.GetAsync(builder.Uri);
-                var request = new HttpRequestMessage(HttpMethod.Delete, builder.Uri);
+            UriBuilder builder = new UriBuilder(URI); // Replace URI with your actual base URI
+            builder.Path += $"/{objectId}";
+            // var Response = await restClient.GetAsync(builder.Uri);
+            var request = new HttpRequestMessage(HttpMethod.Put, builder.Uri);
 
-                var response = await restClient.SendAsync(request);
-                response.EnsureSuccessStatusCode();
+            // Serialize the updated object to JSON
+            var json = JsonConvert.SerializeObject(updatedObject);
+            request.Content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                // Optionally, handle response content if needed
-                var responseContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine($"Object with ID {objectId} deleted successfully.");
-            }
-            catch (Exception ex)
-            {
-                // Handle any exceptions or log errors
-                throw new ApplicationException($"Error deleting object with ID {objectId}.", ex);
-            }
+            var response = await restClient.SendAsync(request);
+            response.EnsureSuccessStatusCode();
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+            var updatedResponse = JsonConvert.DeserializeObject<dynamic>(responseContent);
+
+            // Example: Verify the updated object properties
+            Assert.Equal("Updated MacBook Pro 16", (string)updatedResponse.name);
+            Assert.Equal(2021, (int)updatedResponse.data.year);
+            Assert.Equal(1999.99, (double)updatedResponse.data.price);
+            Assert.Equal("Intel Core i9", (string)updatedResponse.data.CPUmodel);
+            Assert.Equal("2 TB", (string)updatedResponse.data.HardDiskSize);
         }
+        catch (Exception ex)
+        {
+            // Handle any exceptions or log errors
+            throw new ApplicationException($"Error updating object with ID {objectId}.", ex);
+        }
+
 
     }
+    public async Task DeleteObject(int objectId)
+    {
+        try
+        {
+            UriBuilder builder = new UriBuilder(URI); // Replace URI with your actual base URI
+            builder.Path += $"/{objectId}";
+            // var Response = await restClient.GetAsync(builder.Uri);
+            var request = new HttpRequestMessage(HttpMethod.Delete, builder.Uri);
+
+            var response = await restClient.SendAsync(request);
+            response.EnsureSuccessStatusCode();
+
+            // Optionally, handle response content if needed
+            var responseContent = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"Object with ID {objectId} deleted successfully.");
+        }
+        catch (Exception ex)
+        {
+            // Handle any exceptions or log errors
+            throw new ApplicationException($"Error deleting object with ID {objectId}.", ex);
+        }
+    }
+
+}
 
 
 }

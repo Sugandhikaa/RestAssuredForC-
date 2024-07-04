@@ -104,32 +104,32 @@ namespace RestAssuredApiProject.ApiTest.Controllers
         [Fact]
         public async Task AddObjectPost()
         {
-            RestAssuredApi api = new RestAssuredApi();
-            int ObjectId = await api.CreateAnObject();
-            await Task.Delay(2000); // Example: Wait for 2 seconds (adjust as needed)
+            try
+            {
+                RestAssuredApi api = new RestAssuredApi();
+                int objectId = await api.CreateAnObject();
+                await Task.Delay(2000); // Example: Wait for 2 seconds (adjust as needed)
 
-            // Retrieve the object by its ID
-            var createdObject = await api.verifyCreatedObject(ObjectId);
+                // Retrieve the object by its ID
+                var createdObject = await api.verifyCreatedObject(objectId);
 
-            // Print the properties of the created object
-            Console.WriteLine(ObjectId);
-            //Console.WriteLine($"Year: {createdObject.data.year}");
-            // Console.WriteLine($"Price: {createdObject.data.price}");
-            //Console.WriteLine($"CPU Model: {createdObject.data.CPUmodel}");
-            //Console.WriteLine($"Hard Disk Size: {createdObject.data.HardDiskSize}");
+                // Print the object ID
+                Console.WriteLine($"Object ID: {objectId}");
 
-            Assert.Equal("Apple MacBook Pro 16", (string)createdObject.name);
-            Assert.Equal("Apple MacBook Pro 16", (string)createdObject.name);
-            Assert.Equal(2019, (int)createdObject.data.year);
-            Assert.Equal(1849.99, (double)createdObject.data.price);
-            Assert.Equal("Intel Core i9", (string)createdObject.data["CPUmodel"]);
-            Assert.Equal("1 TB", (string)createdObject.data["HardDiskSize"]);
+                // Assert statements to verify object properties
+                Assert.Equal("Apple MacBook Pro 16", (string)createdObject.name);
+                Assert.Equal(2019, (int)createdObject.data.year);
+                Assert.Equal(849.99, (double)createdObject.data.price);
+                Assert.Equal("Intel Core 19", (string)createdObject.data.CPUmodel);
+                Assert.Equal("1 TB", (string)createdObject.data.HardDiskSize);
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions or log errors
+                Console.WriteLine($"Error: {ex.Message}");
+                Assert.Fail($"Test failed with exception: {ex.Message}");
+            }
         }
-        //catch
-        //{
-        //return null;
-        //}
-
         [Fact]
         public async Task CallGetObjectById()
         {
