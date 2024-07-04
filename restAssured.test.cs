@@ -156,7 +156,7 @@ namespace RestAssuredApiProject.ApiTest.Controllers
                 await api.UpdateObject(objectId);
 
 
-                // Optionally, continue with other operations after updating the object
+               
                 var updatedObject = await api.verifyCreatedObject(objectId);
                 Assert.NotNull(updatedObject);
                 Assert.Equal("Updated Object Name", (string)updatedObject.name);
