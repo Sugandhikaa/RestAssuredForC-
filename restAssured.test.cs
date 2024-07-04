@@ -34,7 +34,7 @@ namespace RestAssuredApiProject.ApiTest.Controllers
                     case "2":
                         var product1 = response[1];
                         Assert.Equal("Apple iPhone 12 Mini, 256GB, Blue", product1.Name);
-                        Assert.Null(product1.Data); // Data is expected to be null
+                        Assert.Null(product1.Data); 
                         break;
                     case "3":
                         var item_3 = response[2];

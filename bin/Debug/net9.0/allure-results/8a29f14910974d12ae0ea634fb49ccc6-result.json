@@ -1,0 +1,51 @@
+{
+  "uuid": "31e7127d-86d0-452b-a875-8606753f87d1",
+  "historyId": "8f27240cc26b198bd466d0c84f1101e1",
+  "testCaseId": "57a4593584d9bdbc5fa8e51e5c9c680f",
+  "fullName": "RegExApiTest:RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.AddObjectPost()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-CVD2E62"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "xUnit.net"
+    },
+    {
+      "name": "testClass",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.AddObjectPost"
+    },
+    {
+      "name": "package",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests"
+    }
+  ],
+  "links": [],
+  "name": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.AddObjectPost",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": ""
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1720070173512,
+  "stop": 1720070173814
+}
