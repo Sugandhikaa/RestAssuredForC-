@@ -15,6 +15,7 @@ Before you begin, ensure you have the following installed on your system:
 Clone the repository to your local machine using the following command:
 https://github.com/Sugandhikaa/RestAssuredForC-.git
 
+Test is in the master branch
 **Move to Folder **
 cd RestAssuredApiProject
 
