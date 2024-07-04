@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "I3wsPRzg190=",
+  "dgSpecHash": "F3NbQJ9lPiE=",
   "success": true,
   "projectFilePath": "G:\\xUnitApi\\RegExApiTest\\RegExApiTest.csproj",
   "expectedPackageFiles": [
@@ -90,9 +90,8 @@
     "C:\\Users\\sugandhika\\.nuget\\packages\\xunit.core\\2.8.1\\xunit.core.2.8.1.nupkg.sha512",
     "C:\\Users\\sugandhika\\.nuget\\packages\\xunit.extensibility.core\\2.8.1\\xunit.extensibility.core.2.8.1.nupkg.sha512",
     "C:\\Users\\sugandhika\\.nuget\\packages\\xunit.extensibility.execution\\2.8.1\\xunit.extensibility.execution.2.8.1.nupkg.sha512",
-    "C:\\Users\\sugandhika\\.nuget\\packages\\xunit.runner.console\\2.8.1\\xunit.runner.console.2.8.1.nupkg.sha512",
     "C:\\Users\\sugandhika\\.nuget\\packages\\xunit.runner.utility\\2.4.1\\xunit.runner.utility.2.4.1.nupkg.sha512",
-    "C:\\Users\\sugandhika\\.nuget\\packages\\xunit.runner.visualstudio\\2.8.1\\xunit.runner.visualstudio.2.8.1.nupkg.sha512"
+    "C:\\Users\\sugandhika\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512"
   ],
   "logs": []
 }

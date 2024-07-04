@@ -13,15 +13,13 @@
     <SourceRoot Include="C:\Users\sugandhika\.nuget\packages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)xunit.runner.visualstudio\2.8.1\build\net6.0\xunit.runner.visualstudio.props" Condition="Exists('$(NuGetPackageRoot)xunit.runner.visualstudio\2.8.1\build\net6.0\xunit.runner.visualstudio.props')" />
-    <Import Project="$(NuGetPackageRoot)xunit.runner.console\2.8.1\build\xunit.runner.console.props" Condition="Exists('$(NuGetPackageRoot)xunit.runner.console\2.8.1\build\xunit.runner.console.props')" />
+    <Import Project="$(NuGetPackageRoot)xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.visualstudio.props" Condition="Exists('$(NuGetPackageRoot)xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.visualstudio.props')" />
     <Import Project="$(NuGetPackageRoot)xunit.core\2.8.1\build\xunit.core.props" Condition="Exists('$(NuGetPackageRoot)xunit.core\2.8.1\build\xunit.core.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.testplatform.testhost\17.9.0\build\netcoreapp3.1\Microsoft.TestPlatform.TestHost.props" Condition="Exists('$(NuGetPackageRoot)microsoft.testplatform.testhost\17.9.0\build\netcoreapp3.1\Microsoft.TestPlatform.TestHost.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.codecoverage\17.9.0\build\netstandard2.0\Microsoft.CodeCoverage.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage\17.9.0\build\netstandard2.0\Microsoft.CodeCoverage.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk\17.9.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk\17.9.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Pkgxunit_runner_console Condition=" '$(Pkgxunit_runner_console)' == '' ">C:\Users\sugandhika\.nuget\packages\xunit.runner.console\2.8.1</Pkgxunit_runner_console>
     <Pkgxunit_analyzers Condition=" '$(Pkgxunit_analyzers)' == '' ">C:\Users\sugandhika\.nuget\packages\xunit.analyzers\1.14.0</Pkgxunit_analyzers>
     <PkgAspectInjector Condition=" '$(PkgAspectInjector)' == '' ">C:\Users\sugandhika\.nuget\packages\aspectinjector\2.8.1</PkgAspectInjector>
   </PropertyGroup>

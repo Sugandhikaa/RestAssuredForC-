@@ -105,11 +105,19 @@ namespace RestAssuredApiProject.ApiTest.Controllers
         public async Task AddObjectPost()
         {
             RestAssuredApi api = new RestAssuredApi();
-            string ObjectId=await api.CreateAnObject();
+            int ObjectId=await api.CreateAnObject();
             await Task.Delay(2000); // Example: Wait for 2 seconds (adjust as needed)
 
         // Retrieve the object by its ID
         var createdObject = await api.verifyCreatedObject(ObjectId);
+
+        // Print the properties of the created object
+        Console.WriteLine(ObjectId);
+        //Console.WriteLine($"Year: {createdObject.data.year}");
+       // Console.WriteLine($"Price: {createdObject.data.price}");
+        //Console.WriteLine($"CPU Model: {createdObject.data.CPUmodel}");
+        //Console.WriteLine($"Hard Disk Size: {createdObject.data.HardDiskSize}");
+
             Assert.Equal("Apple MacBook Pro 16", (string)createdObject.name);
             Assert.Equal("Apple MacBook Pro 16", (string)createdObject.name);
             Assert.Equal(2019, (int)createdObject.data.year);

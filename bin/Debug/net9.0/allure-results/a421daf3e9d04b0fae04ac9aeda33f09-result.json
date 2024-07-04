@@ -1,0 +1,51 @@
+{
+  "uuid": "939adb92-444e-49cc-a21b-b99a9cd6c024",
+  "historyId": "365ecee10fd72581f7efd3eebe45f8fe",
+  "testCaseId": "6d0cfb1b0e9f501efcf7cc14123a89eb",
+  "fullName": "RegExApiTest:RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.Get_RestAssured_Info()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-CVD2E62"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "xUnit.net"
+    },
+    {
+      "name": "testClass",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.Get_RestAssured_Info"
+    },
+    {
+      "name": "package",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests"
+    }
+  ],
+  "links": [],
+  "name": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.Get_RestAssured_Info",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": ""
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1720052258472,
+  "stop": 1720052258686
+}

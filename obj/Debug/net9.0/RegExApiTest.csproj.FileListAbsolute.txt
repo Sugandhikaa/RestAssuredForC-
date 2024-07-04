@@ -9,7 +9,6 @@ G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\testhost.exe
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\selenium-manager\linux\selenium-manager
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\selenium-manager\macos\selenium-manager
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\selenium-manager\windows\selenium-manager.exe
-G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\RegExApiTest.deps.json
@@ -107,3 +106,4 @@ G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\Allure.Xunit.reporters.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\AspectInjector.Broker.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\0Harmony.dll
 G:\xUnitApi\RegExApiTest\bin\Debug\net9.0\MimeTypesMap.dll
+g:\xUnitApi\RegExApiTest\bin\Debug\net9.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll

@@ -1,0 +1,52 @@
+{
+  "uuid": "b11d162d-3241-4445-bc0a-32db132ff134",
+  "historyId": "8f27240cc26b198bd466d0c84f1101e1",
+  "testCaseId": "57a4593584d9bdbc5fa8e51e5c9c680f",
+  "fullName": "RegExApiTest:RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.AddObjectPost()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET TP Worker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-CVD2E62"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "xUnit.net"
+    },
+    {
+      "name": "testClass",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.AddObjectPost"
+    },
+    {
+      "name": "package",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests"
+    }
+  ],
+  "links": [],
+  "name": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.AddObjectPost",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Assert.Equal() Failure: Strings differ\r\nExpected: \"Apple MacBook Pro 16\"\r\nActual:   null",
+    "trace": "   at Xunit.Assert.Equal(String expected, String actual, Boolean ignoreCase, Boolean ignoreLineEndingDifferences, Boolean ignoreWhiteSpaceDifferences, Boolean ignoreAllWhiteSpace) in /_/src/xunit.assert/Asserts/StringAsserts.cs:line 1332\r\n   at Xunit.Assert.Equal(String expected, String actual) in /_/src/xunit.assert/Asserts/StringAsserts.cs:line 841\r\n   at RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.AddObjectPost() in G:\\xUnitApi\\RegExApiTest\\restAssured.test.cs:line 121\r\n   at Xunit.Sdk.TestInvoker`1.<>c__DisplayClass46_0.<<InvokeTestMethodAsync>b__1>d.MoveNext() in /_/src/xunit.execution/Sdk/Frameworks/Runners/TestInvoker.cs:line 253\r\n--- End of stack trace from previous location ---\r\n   at Xunit.Sdk.ExecutionTimer.AggregateAsync(Func`1 asyncAction) in /_/src/xunit.execution/Sdk/Frameworks/ExecutionTimer.cs:line 48\r\n   at Xunit.Sdk.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.core/Sdk/ExceptionAggregator.cs:line 90"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1720057510171,
+  "stop": 1720057512656
+}

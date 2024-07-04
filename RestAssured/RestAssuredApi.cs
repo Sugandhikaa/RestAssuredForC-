@@ -23,19 +23,19 @@ namespace RegExApiTest.RestAssured
             UriBuilder builder = new UriBuilder($"{URI}");
             var Response = await restClient.GetAsync(builder.Uri);
             var context = await Response.Content.ReadAsStringAsync();
-            try
-            {
+         //   try
+           // {
                 var responseModel = JsonConvert.DeserializeObject<List<GetListMain>>(context);
                 return responseModel;
-            }
-            catch
-            {
-                return null;
-            }
+            //}
+            //catch
+           // {
+             //   return null;
+            //}
         }
         //add object funtions
 
-        public async Task<String> CreateAnObject()
+        public async Task<int> CreateAnObject()
         {
             var newObject = new
             {
@@ -48,8 +48,9 @@ namespace RegExApiTest.RestAssured
                     HardDiskSize = "1 TB"
                 }
             };
+            UriBuilder builder = new UriBuilder($"{URI}");
             var responseModel = JsonConvert.SerializeObject(newObject);
-            var request = new HttpRequestMessage(HttpMethod.Post, "objects");
+            var request = new HttpRequestMessage(HttpMethod.Post, builder.Uri);
             request.Content = new StringContent(responseModel, Encoding.UTF8, "application/json");
             var responceback = await restClient.SendAsync(request);
             responceback.EnsureSuccessStatusCode();
@@ -58,12 +59,13 @@ namespace RegExApiTest.RestAssured
             var createdObject = JsonConvert.DeserializeObject<dynamic>(responseContent);
 
             // Extract and return the ID of the created object
-            string objectId = createdObject.id; // Adjust this based on your actual response structure
+            int objectId = createdObject.id; // Adjust this based on your actual response structure
             return objectId;
         }
-        public async Task<dynamic> verifyCreatedObject(string objectId)
+        public async Task<dynamic> verifyCreatedObject(int objectId)
         {
-            UriBuilder builder = new UriBuilder($"{URI}","/{objectId}");
+            UriBuilder builder = new UriBuilder($"{URI}");
+            builder.Path+=objectId.ToString();
             var Response = await restClient.GetAsync(builder.Uri);
             var context = await Response.Content.ReadAsStringAsync();
 
@@ -74,18 +76,22 @@ namespace RegExApiTest.RestAssured
 
         }
 
-        public async Task<object> GetObjectById(int id)
+        public async Task<object> GetObjectById(int objectId)
         {
             try
             {
+                 UriBuilder builder = new UriBuilder($"{URI}");
+            builder.Path+=objectId.ToString();
+            var Response = await restClient.GetAsync(builder.Uri);
                 // Assuming restClient is already initialized in your class
-                var request = new HttpRequestMessage(HttpMethod.Get, $"objects/{id}");
+                var request = new HttpRequestMessage(HttpMethod.Get, builder.Uri);
 
                 var response = await restClient.SendAsync(request);
                 response.EnsureSuccessStatusCode();
 
                 var responseContent = await response.Content.ReadAsStringAsync();
                 var responseObject = JsonConvert.DeserializeObject<dynamic>(responseContent);
+           
 
                 // Example: Assuming the API returns an object with properties 'name' and 'data'
                 var objectName = (string)responseObject.name;
@@ -99,17 +105,17 @@ namespace RegExApiTest.RestAssured
                 Console.WriteLine($"Year: {objectYear}");
                 Console.WriteLine($"Price: {objectPrice}");
                 Console.WriteLine($"CPU Model: {objectCPUModel}");
-                Console.WriteLine($"Hard Disk Size: {objectHardDiskSize}");
+                return responseObject; // Return the deserialized object if needed   
 
-                return responseObject; // Return the deserialized object if needed
+                
             }
             catch (Exception ex)
             {
                 // Handle any exceptions or log errors
-                throw new ApplicationException($"Error fetching object with ID {id}.", ex);
+              //  throw new ApplicationException($"Error fetching object with ID {objectId}.", ex);
             }
         }
-        public async Task UpdateObject(int id)
+        public async Task UpdateObject(int objectId)
         {
             var updatedObject = new
             {
@@ -125,7 +131,10 @@ namespace RegExApiTest.RestAssured
 
             try
             {
-                var request = new HttpRequestMessage(HttpMethod.Put, $"objects/{id}");
+                UriBuilder builder = new UriBuilder($"{URI}");
+            builder.Path+=objectId.ToString();
+            var Response = await restClient.GetAsync(builder.Uri);
+                var request = new HttpRequestMessage(HttpMethod.Put,builder.Uri);
 
                 // Serialize the updated object to JSON
                 var json = JsonConvert.SerializeObject(updatedObject);
@@ -147,28 +156,31 @@ namespace RegExApiTest.RestAssured
             catch (Exception ex)
             {
                 // Handle any exceptions or log errors
-                throw new ApplicationException($"Error updating object with ID {id}.", ex);
+                throw new ApplicationException($"Error updating object with ID {objectId}.", ex);
             }
 
 
         }
-        public async Task DeleteObject(int id)
+        public async Task DeleteObject(int objectId)
         {
             try
             {
-                var request = new HttpRequestMessage(HttpMethod.Delete, $"objects/{id}");
+                UriBuilder builder = new UriBuilder($"{URI}");
+            builder.Path+=objectId.ToString();
+           // var Response = await restClient.GetAsync(builder.Uri);
+                var request = new HttpRequestMessage(HttpMethod.Delete, builder.Uri);
 
                 var response = await restClient.SendAsync(request);
                 response.EnsureSuccessStatusCode();
 
                 // Optionally, handle response content if needed
                 var responseContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine($"Object with ID {id} deleted successfully.");
+                Console.WriteLine($"Object with ID {objectId} deleted successfully.");
             }
             catch (Exception ex)
             {
                 // Handle any exceptions or log errors
-                throw new ApplicationException($"Error deleting object with ID {id}.", ex);
+                throw new ApplicationException($"Error deleting object with ID {objectId}.", ex);
             }
         }
 

@@ -1,0 +1,52 @@
+{
+  "uuid": "fd579809-2db4-4e6c-b0e1-ca23329fc8cd",
+  "historyId": "8f27240cc26b198bd466d0c84f1101e1",
+  "testCaseId": "57a4593584d9bdbc5fa8e51e5c9c680f",
+  "fullName": "RegExApiTest:RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.AddObjectPost()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET TP Worker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-CVD2E62"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "xUnit.net"
+    },
+    {
+      "name": "testClass",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.AddObjectPost"
+    },
+    {
+      "name": "package",
+      "value": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests"
+    }
+  ],
+  "links": [],
+  "name": "RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.AddObjectPost",
+  "status": "broken",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "An invalid request URI was provided. Either the request URI must be an absolute URI or BaseAddress must be set.",
+    "trace": "   at System.Net.Http.HttpClient.PrepareRequestMessage(HttpRequestMessage request)\r\n   at System.Net.Http.HttpClient.SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)\r\n   at RegExApiTest.RestAssured.RestAssuredApi.CreateAnObject() in G:\\xUnitApi\\RegExApiTest\\RestAssured\\RestAssuredApi.cs:line 54\r\n   at RestAssuredApiProject.ApiTest.Controllers.RestAssuredApiTests.AddObjectPost() in G:\\xUnitApi\\RegExApiTest\\restAssured.test.cs:line 108\r\n   at Xunit.Sdk.TestInvoker`1.<>c__DisplayClass46_0.<<InvokeTestMethodAsync>b__1>d.MoveNext() in /_/src/xunit.execution/Sdk/Frameworks/Runners/TestInvoker.cs:line 253\r\n--- End of stack trace from previous location ---\r\n   at Xunit.Sdk.ExecutionTimer.AggregateAsync(Func`1 asyncAction) in /_/src/xunit.execution/Sdk/Frameworks/ExecutionTimer.cs:line 48\r\n   at Xunit.Sdk.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.core/Sdk/ExceptionAggregator.cs:line 90"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1720051373399,
+  "stop": 1720051373414
+}
