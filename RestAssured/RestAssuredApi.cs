@@ -64,8 +64,8 @@ namespace RegExApiTest.RestAssured
         }
         public async Task<dynamic> verifyCreatedObject(int objectId)
         {
-             UriBuilder builder = new UriBuilder(URI); // Replace URI with your actual base URI
-        builder.Path += $"/{objectId}";
+            UriBuilder builder = new UriBuilder(URI); // Replace URI with your actual base URI
+            builder.Path += $"/{objectId}";
             var Response = await restClient.GetAsync(builder.Uri);
             var context = await Response.Content.ReadAsStringAsync();
 
@@ -130,9 +130,9 @@ namespace RegExApiTest.RestAssured
 
             try
             {
-                UriBuilder builder = new UriBuilder($"{URI}");
-                builder.Path += objectId.ToString();
-                var Response = await restClient.GetAsync(builder.Uri);
+                UriBuilder builder = new UriBuilder(URI); // Replace URI with your actual base URI
+                builder.Path += $"/{objectId}";
+                // var Response = await restClient.GetAsync(builder.Uri);
                 var request = new HttpRequestMessage(HttpMethod.Put, builder.Uri);
 
                 // Serialize the updated object to JSON
@@ -164,8 +164,8 @@ namespace RegExApiTest.RestAssured
         {
             try
             {
-                UriBuilder builder = new UriBuilder($"{URI}");
-                builder.Path += objectId.ToString();
+                UriBuilder builder = new UriBuilder(URI); // Replace URI with your actual base URI
+                builder.Path += $"/{objectId}";
                 // var Response = await restClient.GetAsync(builder.Uri);
                 var request = new HttpRequestMessage(HttpMethod.Delete, builder.Uri);
 
