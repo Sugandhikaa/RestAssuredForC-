@@ -23,14 +23,14 @@ namespace RegExApiTest.RestAssured
             UriBuilder builder = new UriBuilder($"{URI}");
             var Response = await restClient.GetAsync(builder.Uri);
             var context = await Response.Content.ReadAsStringAsync();
-         //   try
-           // {
-                var responseModel = JsonConvert.DeserializeObject<List<GetListMain>>(context);
-                return responseModel;
+            //   try
+            // {
+            var responseModel = JsonConvert.DeserializeObject<List<GetListMain>>(context);
+            return responseModel;
             //}
             //catch
-           // {
-             //   return null;
+            // {
+            //   return null;
             //}
         }
         //add object funtions
@@ -55,7 +55,7 @@ namespace RegExApiTest.RestAssured
             var responceback = await restClient.SendAsync(request);
             responceback.EnsureSuccessStatusCode();
 
-             var responseContent = await responceback.Content.ReadAsStringAsync();
+            var responseContent = await responceback.Content.ReadAsStringAsync();
             var createdObject = JsonConvert.DeserializeObject<dynamic>(responseContent);
 
             // Extract and return the ID of the created object
@@ -64,8 +64,8 @@ namespace RegExApiTest.RestAssured
         }
         public async Task<dynamic> verifyCreatedObject(int objectId)
         {
-            UriBuilder builder = new UriBuilder($"{URI}");
-            builder.Path+=objectId.ToString();
+             UriBuilder builder = new UriBuilder(URI); // Replace URI with your actual base URI
+        builder.Path += $"/{objectId}";
             var Response = await restClient.GetAsync(builder.Uri);
             var context = await Response.Content.ReadAsStringAsync();
 
@@ -80,10 +80,9 @@ namespace RegExApiTest.RestAssured
         {
             try
             {
-                 UriBuilder builder = new UriBuilder($"{URI}");
-            builder.Path+=objectId.ToString();
-            var Response = await restClient.GetAsync(builder.Uri);
-                // Assuming restClient is already initialized in your class
+                UriBuilder builder = new UriBuilder(URI); // Assuming URI is a string holding your base URI
+                builder.Path += $"/{objectId}"; // Append objectId to the path
+
                 var request = new HttpRequestMessage(HttpMethod.Get, builder.Uri);
 
                 var response = await restClient.SendAsync(request);
@@ -91,7 +90,6 @@ namespace RegExApiTest.RestAssured
 
                 var responseContent = await response.Content.ReadAsStringAsync();
                 var responseObject = JsonConvert.DeserializeObject<dynamic>(responseContent);
-           
 
                 // Example: Assuming the API returns an object with properties 'name' and 'data'
                 var objectName = (string)responseObject.name;
@@ -105,14 +103,15 @@ namespace RegExApiTest.RestAssured
                 Console.WriteLine($"Year: {objectYear}");
                 Console.WriteLine($"Price: {objectPrice}");
                 Console.WriteLine($"CPU Model: {objectCPUModel}");
-                return responseObject; // Return the deserialized object if needed   
 
-                
+                return responseObject; // Return the deserialized object if needed
+
+
             }
             catch (Exception ex)
             {
                 // Handle any exceptions or log errors
-              //  throw new ApplicationException($"Error fetching object with ID {objectId}.", ex);
+                //  throw new ApplicationException($"Error fetching object with ID {objectId}.", ex);
             }
         }
         public async Task UpdateObject(int objectId)
@@ -132,9 +131,9 @@ namespace RegExApiTest.RestAssured
             try
             {
                 UriBuilder builder = new UriBuilder($"{URI}");
-            builder.Path+=objectId.ToString();
-            var Response = await restClient.GetAsync(builder.Uri);
-                var request = new HttpRequestMessage(HttpMethod.Put,builder.Uri);
+                builder.Path += objectId.ToString();
+                var Response = await restClient.GetAsync(builder.Uri);
+                var request = new HttpRequestMessage(HttpMethod.Put, builder.Uri);
 
                 // Serialize the updated object to JSON
                 var json = JsonConvert.SerializeObject(updatedObject);
@@ -166,8 +165,8 @@ namespace RegExApiTest.RestAssured
             try
             {
                 UriBuilder builder = new UriBuilder($"{URI}");
-            builder.Path+=objectId.ToString();
-           // var Response = await restClient.GetAsync(builder.Uri);
+                builder.Path += objectId.ToString();
+                // var Response = await restClient.GetAsync(builder.Uri);
                 var request = new HttpRequestMessage(HttpMethod.Delete, builder.Uri);
 
                 var response = await restClient.SendAsync(request);
