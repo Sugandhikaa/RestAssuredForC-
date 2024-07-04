@@ -91,20 +91,8 @@ namespace RegExApiTest.RestAssured
                 var responseContent = await response.Content.ReadAsStringAsync();
                 var responseObject = JsonConvert.DeserializeObject<dynamic>(responseContent);
 
-                // Example: Assuming the API returns an object with properties 'name' and 'data'
-                var objectName = (string)responseObject.name;
-                var objectYear = (int)responseObject.data.year;
-                var objectPrice = (double)responseObject.data.price;
-                var objectCPUModel = (string)responseObject.data.CPUmodel;
-                var objectHardDiskSize = (string)responseObject.data.HardDiskSize;
-
-                Console.WriteLine($"Object details:");
-                Console.WriteLine($"Name: {objectName}");
-                Console.WriteLine($"Year: {objectYear}");
-                Console.WriteLine($"Price: {objectPrice}");
-                Console.WriteLine($"CPU Model: {objectCPUModel}");
-
-                return responseObject; // Return the deserialized object if needed
+               
+                return responseObject; 
 
             }
             catch (HttpRequestException ex)

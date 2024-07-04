@@ -125,9 +125,8 @@ namespace RestAssuredApiProject.ApiTest.Controllers
             }
             catch (Exception ex)
             {
-                // Handle exceptions or log errors
                 Console.WriteLine($"Error: {ex.Message}");
-              //  Assert.Fail($"Test failed with exception: {ex.Message}");
+
             }
         }
         [Fact]
@@ -136,14 +135,14 @@ namespace RestAssuredApiProject.ApiTest.Controllers
             try
             {
                 RestAssuredApi api = new RestAssuredApi();
-                int objectId = 1;
-                var fetchedObject = await api.GetObjectById(objectId);
+                int ObjectID = 7;
+                var fetchedObject = await api.GetObjectById(ObjectID);
 
 
             }
             catch (Exception ex)
             {
-                // Handle exceptions from GetObjectById method
+
                 Console.WriteLine($"Error fetching object: {ex.Message}");
             }
         }
@@ -153,7 +152,7 @@ namespace RestAssuredApiProject.ApiTest.Controllers
             try
             {
                 RestAssuredApi api = new RestAssuredApi();
-                int objectId = 1; // Replace with the actual ID of the object you want to update
+                int objectId = 7;
                 await api.UpdateObject(objectId);
 
 
@@ -178,10 +177,10 @@ namespace RestAssuredApiProject.ApiTest.Controllers
             try
             {
                 RestAssuredApi api = new RestAssuredApi();
-                int objectId = 1; // Replace with the actual ID of the object you want to delete
+                int objectId = 7;
                 await api.DeleteObject(objectId);
 
-                // Optionally, continue with other operations after deleting the object
+
             }
             catch (Exception ex)
             {
