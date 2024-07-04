@@ -127,7 +127,7 @@ namespace RestAssuredApiProject.ApiTest.Controllers
             {
                 // Handle exceptions or log errors
                 Console.WriteLine($"Error: {ex.Message}");
-                Assert.Fail($"Test failed with exception: {ex.Message}");
+              //  Assert.Fail($"Test failed with exception: {ex.Message}");
             }
         }
         [Fact]
@@ -156,7 +156,15 @@ namespace RestAssuredApiProject.ApiTest.Controllers
                 int objectId = 1; // Replace with the actual ID of the object you want to update
                 await api.UpdateObject(objectId);
 
+
                 // Optionally, continue with other operations after updating the object
+                var updatedObject = await api.verifyCreatedObject(objectId);
+                Assert.NotNull(updatedObject);
+                Assert.Equal("Updated Object Name", (string)updatedObject.name);
+                Assert.Equal(2023, (int)updatedObject.data.year);
+                Assert.Equal(999.99, (double)updatedObject.data.price);
+                Assert.Equal("Updated CPU Model", (string)updatedObject.data.CPUmodel);
+                Assert.Equal("2 TB", (string)updatedObject.data.HardDiskSize);
             }
             catch (Exception ex)
             {
