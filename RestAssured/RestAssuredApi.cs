@@ -173,6 +173,18 @@ namespace RegExApiTest.RestAssured
 
 
     }
+       public async Task<dynamic> verifyUpdatedObject(int objectId)
+        {
+            UriBuilder builder = new UriBuilder(URI); // Replace URI with your actual base URI
+            builder.Path += $"/{objectId}";
+            var Response = await restClient.GetAsync(builder.Uri);
+            var context = await Response.Content.ReadAsStringAsync();
+
+
+            //var responceContent = await responceback.Content.ReadAsStringAsync();
+            var verifyUpdatedObject = JsonConvert.DeserializeObject<dynamic>(context);
+            return verifyUpdatedObject;
+        }
     public async Task DeleteObject(int objectId)
     {
         try
